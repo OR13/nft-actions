@@ -1,0 +1,16 @@
+name: "NFT Actions"
+description: |
+  Ethereum NFT publishing via GitHub Actions
+inputs:
+  contract:
+    description: |
+      ERC721 NFT Contract Address.
+
+outputs:
+  json:
+    description: "The output in as json."
+  text:
+    description: "The output in as text."
+runs:
+  using: "node16"
+  main: "dist/index.js"
