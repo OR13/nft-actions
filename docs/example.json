@@ -1,7 +1,7 @@
 {
-  "id": "123",
-  "name": "123",
-  "image": "https://.../nyan.gif",
+  "id": "example",
+  "name": "example",
+  "image": "https://or13.github.io/nft-actions/nyan.gif",
   "description": "GitHub Actions NFT Example",
   "attributes": []
 }
