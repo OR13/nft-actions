@@ -8,9 +8,9 @@ on:
 jobs:
   demo:
     runs-on: ubuntu-latest
-    name: Post Discussion
+    name: Mint NFT
     steps:
-      - name: Post Discussion
+      - name: Mint NFT
         uses: or13/nft-actions@v0.0.2
         id: post
         with:

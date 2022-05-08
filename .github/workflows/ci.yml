@@ -36,7 +36,13 @@ jobs:
         uses: ./
         id: award_item
         with:
-          contract: "0x123"
+          mnemonic: ${{ secrets.MNEMONIC }}
+          derivation-path: ${{ secrets.HD_PATH }}
+          web3-provider: ${{ secrets.WEB3_PROVIDER }}
+
+          address: "0xa2E49db1a0707a1fFCcF061fB13168B176755CE8"
+          artifact: "./docs/GithubActionsNFT.json"
+          token-uri: "https://or13.github.io/nft-actions/example.json?dev=${{ github.sha }}"
 
       - name: Review the results
         run: |-

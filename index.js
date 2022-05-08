@@ -1,10 +1,20 @@
+const path = require("path");
+const fs = require("fs");
 const core = require("@actions/core");
 
 const lib = require("./src");
 
 const getOpts = () => {
   return {
-    contract: core.getInput("contract"),
+    providerOrUrl: core.getInput("web3-provider"),
+    mnemonic: core.getInput("mnemonic"),
+    derivationPath: core.getInput("derivation-path"),
+
+    address: core.getInput("address"),
+    artifact: JSON.parse(
+      fs.readFileSync(path.resolve(core.getInput("artifact"))).toString()
+    ),
+    tokenUri: core.getInput("token-uri"),
   };
 };
 
