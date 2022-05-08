@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "ncc build index.js --license licenses.txt",
-    "test": "source .env && PERSONAL_ACCESS_TOKEN=$PERSONAL_ACCESS_TOKEN jest",
+    "test": "source .env && MNEMONIC=$MNEMONIC HD_PATH=$HD_PATH WEB3_PROVIDER=$WEB3_PROVIDER jest",
     "prerelease": "npm run build",
     "release": "npm version patch && git add ./package.json",
     "postrelease": "git push --tags",
@@ -24,7 +24,8 @@
   "homepage": "https://github.com/OR13/nft-actions#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
-    "@octokit/graphql": "^4.8.0"
+    "@truffle/hdwallet-provider": "^2.0.8",
+    "web3": "^1.7.0"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.33.4",

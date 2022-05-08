@@ -2,9 +2,27 @@ name: "NFT Actions"
 description: |
   Ethereum NFT publishing via GitHub Actions
 inputs:
-  contract:
+  mnemonic:
+    description: |
+      BIP 39 Mnemonic
+  derivation-path:
+    description: |
+      BIP 44 HD Path
+  web3-provider:
+    description: |
+      Web3 Provider URI
+
+  address:
     description: |
       ERC721 NFT Contract Address.
+
+  artifact:
+    description: |
+      ERC721 NFT Contract Artifact.
+
+  token-uri:
+    description: |
+      The Token URI for the item to award.
 
 outputs:
   json:
