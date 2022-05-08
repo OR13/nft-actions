@@ -42,6 +42,7 @@ const awardItem = async (options = {}) => {
   const tx = await contract.methods
     .awardItem(account, options.tokenUri)
     .send({ from: account });
+  console.log(JSON.stringify(tx, null, 2));
   result.tx = tx;
   return result;
 };

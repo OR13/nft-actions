@@ -27,6 +27,7 @@ async function run() {
   } catch (error) {
     core.setFailed(error.message);
   }
+  process.exit(0); //hacky way to avoid web3 errors.
 }
 
 run();
