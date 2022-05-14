@@ -11,7 +11,7 @@ jobs:
     name: Mint NFT
     steps:
       - name: Award Item
-        uses: or13/nft-actions@v0.0.0
+        uses: or13/nft-actions@v0.0.1
         id: award_item
         with:
           mnemonic: ${{ secrets.MNEMONIC }}
