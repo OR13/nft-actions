@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Mint NFT
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Award Item
         uses: or13/nft-actions@v0.0.1
         id: award_item
