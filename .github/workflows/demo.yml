@@ -1,0 +1,27 @@
+name: Demo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    name: Mint NFT
+    steps:
+      - name: Award Item
+        uses: or13/nft-actions@v0.0.0
+        id: award_item
+        with:
+          mnemonic: ${{ secrets.MNEMONIC }}
+          derivation-path: ${{ secrets.HD_PATH }}
+          web3-provider: ${{ secrets.WEB3_PROVIDER }}
+
+          address: "0xa2E49db1a0707a1fFCcF061fB13168B176755CE8"
+          artifact: "./docs/GithubActionsNFT.json"
+          token-uri: "https://or13.github.io/nft-actions/example.json?dev=${{ github.sha }}"
+
+      - name: Review the results
+        run: |-
+          echo '${{ steps.award_item.outputs.json }}' | jq
