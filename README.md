@@ -11,3 +11,5 @@ GithubActionsNFT deployed to: https://ropsten.etherscan.io/address/0xa2E49db1a07
 ### Examples
 
 See [demo.yml](./.github/workflows/demo.yml)
+
+<img src="./example.png" alt="nft example" />
