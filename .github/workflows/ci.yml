@@ -46,4 +46,4 @@ jobs:
 
       - name: Review the results
         run: |-
-          echo "${{ steps.award_item.outputs.json }}" | jq
+          echo '${{ steps.award_item.outputs.json }}' | jq
